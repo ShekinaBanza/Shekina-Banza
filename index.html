@@ -17,6 +17,11 @@
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 4px; }
     </style>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init("8JjPpX-sFrWSJ6L-u");
+    </script>
+
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen text-white overflow-x-hidden custom-scrollbar">
 
@@ -393,6 +398,7 @@
     </section>
 
     <!-- Contact Section -->
+    <!-- Section Contact - ENVOI REEL D'EMAIL -->
     <section id="contact" class="py-32 px-6 bg-black/20 backdrop-blur-sm">
         <div class="max-w-4xl mx-auto text-center">
             <div class="space-y-8">
@@ -402,6 +408,7 @@
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Infos contact -->
                     <div class="space-y-6">
                         <div class="bg-black/30 backdrop-blur-xl p-8 rounded-3xl border border-white/10">
                             <h3 class="text-2xl font-bold mb-6">📞 Contact rapide</h3>
@@ -411,11 +418,12 @@
                                 <p class="flex items-center"><i class="fas fa-map-marker-alt text-orange-400 mr-4 text-xl"></i>Av. Du Palmier, Likasi - Lubumbashi</p>
                             </div>
                         </div>
+                        <!-- Réseaux sociaux corrigés -->
                         <div class="flex flex-wrap gap-4 justify-center">
-                            <a href="https://github.com/shekinabanza" target="_blank" class="w-14 h-14 bg-black/50 backdrop-blur-xl rounded-2xl flex items-center justify-center hover:bg-purple-600 transition-all shadow-xl hover:shadow-2xl">
+                            <a href="https://github.com/ShekinaBanza" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-black/50 backdrop-blur-xl rounded-2xl flex items-center justify-center hover:bg-purple-600 transition-all shadow-xl hover:shadow-2xl">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
-                            <a href="https://linkedin.com/in/shekina-banza" target="_blank" class="w-14 h-14 bg-black/50 backdrop-blur-xl rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all shadow-xl hover:shadow-2xl">
+                            <a href="https://linkedin.com/in/shekina-banza" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-black/50 backdrop-blur-xl rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all shadow-xl hover:shadow-2xl">
                                 <i class="fab fa-linkedin text-xl"></i>
                             </a>
                             <a href="#" onclick="downloadCV()" class="w-14 h-14 bg-black/50 backdrop-blur-xl rounded-2xl flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all shadow-xl hover:shadow-2xl">
@@ -424,20 +432,49 @@
                         </div>
                     </div>
                     
+                    <!-- Formulaire ENVOI REEL -->
                     <div class="bg-black/30 backdrop-blur-xl p-10 rounded-3xl border border-white/10">
-                        <form id="contact-form" class="space-y-6">
+                        <form id="contactForm" class="space-y-6">
                             <div>
-                                <input type="text" placeholder="Votre nom" class="w-full p-5 bg-black/50 border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all">
+                                <input type="text" id="nom" placeholder="Votre nom complet *" required
+                                       class="contact-input w-full p-5 bg-black/50 border-2 border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all duration-300">
                             </div>
                             <div>
-                                <input type="email" placeholder="Votre email" class="w-full p-5 bg-black/50 border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all">
+                                <input type="email" id="email" placeholder="Votre email *" required
+                                       class="contact-input w-full p-5 bg-black/50 border-2 border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all duration-300">
                             </div>
                             <div>
-                                <textarea rows="5" placeholder="Votre message" class="w-full p-5 bg-black/50 border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all resize-none"></textarea>
+                                <input type="tel" id="telephone" placeholder="Votre téléphone (optionnel)"
+                                       class="contact-input w-full p-5 bg-black/50 border-2 border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all duration-300">
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-5 px-8 rounded-2xl hover:from-purple-500 hover:to-blue-500 transform hover:scale-105 transition-all shadow-xl hover:shadow-2xl text-lg">
-                                Envoyer le message
+                            <div>
+                                <select id="service" class="contact-input w-full p-5 bg-black/50 border-2 border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all duration-300">
+                                    <option value="">Type de projet *</option>
+                                    <option value="website">Site Web / E-commerce</option>
+                                    <option value="application">Application Web/Mobile</option>
+                                    <option value="maintenance">Maintenance IT</option>
+                                    <option value="formation">Formation Développement</option>
+                                    <option value="autre">Autre projet</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea id="message" rows="5" placeholder="Décrivez votre projet en détail *" required
+                                          class="contact-input w-full p-5 bg-black/50 border-2 border-white/20 rounded-2xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none transition-all duration-300 resize-none"></textarea>
+                            </div>
+                            
+                            <!-- Bouton d'envoi avec loader -->
+                            <button type="submit" id="submitBtn" class="submit-btn w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-5 px-8 rounded-2xl hover:from-purple-500 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl text-lg relative overflow-hidden">
+                                <span class="btn-content flex items-center justify-center">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Envoyer le message
+                                </span>
+                                <div class="loader hidden absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                                    <i class="fas fa-spinner fa-spin text-xl"></i>
+                                </div>
                             </button>
+                            
+                            <!-- Message de succès/erreur -->
+                            <div id="formMessage" class="hidden p-4 rounded-2xl font-semibold text-center transition-all duration-300"></div>
                         </form>
                     </div>
                 </div>
@@ -448,6 +485,7 @@
             </div>
         </div>
     </section>
+
 
     <script>
         // Typed.js animation
@@ -487,7 +525,7 @@
         // Download CV
         function downloadCV() {
             // Ici vous pouvez lier vers vos vrais CVs
-            window.open('CV-SHEKINA-MODE-IT-DEV-BACK.pdf', '_blank');
+            window.open('CV SHEKINA MODE IT DEV BACK.pdf', '_blank');
         }
 
         // Parallax effect
@@ -520,6 +558,87 @@
             el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
             observer.observe(el);
         });
+    </script>
+    <script>
+        // ✅ FONCTION D'ENVOI EMAIL REEL - Ajoutez à la fin du <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnContent = submitBtn.querySelector('.btn-content');
+            const loader = submitBtn.querySelector('.loader');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Animation loader
+            submitBtn.disabled = true;
+            btnContent.classList.add('hidden');
+            loader.classList.remove('hidden');
+            formMessage.classList.remove('hidden', 'bg-green-500/20', 'bg-red-500/20');
+            
+            // Récupération des données
+            const formData = {
+                nom: document.getElementById('nom').value,
+                email: document.getElementById('email').value,
+                telephone: document.getElementById('telephone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                date: new Date().toLocaleString('fr-FR')
+            };
+            
+            // Génération du sujet et corps d'email
+            const sujet = `Nouveau contact portfolio: ${formData.nom} - ${formData.service}`;
+            const corpsEmail = `
+        🎯 NOUVEAU CONTACT PORTFOLIO SHEKINA BANZA
+        
+        👤 Nom: ${formData.nom}
+        📧 Email: ${formData.email}
+        📱 Téléphone: ${formData.telephone || 'Non fourni'}
+        💼 Service: ${formData.service}
+        📅 Date: ${formData.date}
+        
+        💬 MESSAGE:
+        ${formData.message}
+        
+        ---
+        Portfolio:https://shekinabanza.github.io/Shekina-Banza
+        GitHub: https://github.com/ShekinaBanza
+            `.trim();
+            
+            // ENVOI VIA EmailJS (GRATUIT - 200 emails/mois)
+            emailjs.send('service_dvr74yx', 'template_6w7rc4q', formData)
+                .then(function(response) {
+                    formMessage.textContent = '✅ Message envoyé avec succès ! Je vous réponds sous 24h.';
+                    formMessage.className = 'p-4 rounded-2xl font-semibold text-center bg-green-500/20 border-2 border-green-500/50 text-green-300';
+                    document.getElementById('contactForm').reset();
+                }, function(error) {
+                    // Fallback: Ouverture client email
+                    const mailtoLink = `mailto:shekina646@gmail.com?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corpsEmail)}`;
+                    window.location.href = mailtoLink;
+                    
+                    formMessage.textContent = '✅ Ouvrez votre client email pour envoyer le message !';
+                    formMessage.className = 'p-4 rounded-2xl font-semibold text-center bg-blue-500/20 border-2 border-blue-500/50 text-blue-300';
+                })
+                .finally(function() {
+                    // Reset bouton
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        btnContent.classList.remove('hidden');
+                        loader.classList.add('hidden');
+                    }, 2000);
+                });
+        });
+        
+        // Fonction téléchargement CV
+        function downloadCV() {
+            const cvLinks = [
+                'CV SHEKINA MODE IT DEV BACK.pdf',
+                'CV SHEKINA MODE IT DEV FRONT.pdf', 
+                'CV SHEKINA MODE IT TECH.pdf'
+            ];
+            // Ouvre le premier CV ou demande à l'utilisateur
+            window.open(cvLinks[0], '_blank');
+        }
+
     </script>
 </body>
 </html>
