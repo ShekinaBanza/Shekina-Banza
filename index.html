@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/lib/typed.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
@@ -18,7 +19,6 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #58a6ff, #1f6feb); border-radius: 4px; }
         .github-dark { background: linear-gradient(to bottom, #0d1117 0%, #161b22 50%, #0d1117 100%); }
 
-        /* Timeline styles */
         .timeline-container { position: relative; }
         .timeline-line { position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: linear-gradient(to bottom, #58a6ff, #1f6feb, #58a6ff); border-radius: 2px; }
         .timeline-item { position: relative; width: 50%; padding: 20px 40px; }
@@ -30,7 +30,6 @@
         .timeline-card { background: rgba(33, 38, 45, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: 20px; padding: 24px; transition: all 0.4s ease; }
         .timeline-card:hover { border-color: rgba(88, 166, 255, 0.6); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(88, 166, 255, 0.15); }
 
-        /* Visitor counter animation */
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 20px rgba(88, 166, 255, 0.3); }
             50% { box-shadow: 0 0 40px rgba(88, 166, 255, 0.6); }
@@ -43,10 +42,6 @@
             .timeline-dot { left: 10px !important; right: auto !important; }
         }
     </style>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        emailjs.init("8JjPpX-sFrWSJ6L-u");
-    </script>
 <base target="_blank">
 </head>
 <body class="github-dark min-h-screen text-white overflow-x-hidden custom-scrollbar">
@@ -56,9 +51,9 @@
             <a href="#home" class="text-2xl font-bold gradient-text">SB</a>
             <ul class="flex space-x-8 items-center hidden md:flex">
                 <li><a href="#home" class="hover:text-white transition-all duration-300 relative group">Accueil<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#about" class="hover:text-white transition-all duration-300 relative group">À propos<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#experience" class="hover:text-white transition-all duration-300 relative group">Expérience<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#skills" class="hover:text-white transition-all duration-300 relative group">Compétences<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
+                <li><a href="#about" class="hover:text-white transition-all duration-300 relative group">A propos<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
+                <li><a href="#experience" class="hover:text-white transition-all duration-300 relative group">Experience<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
+                <li><a href="#skills" class="hover:text-white transition-all duration-300 relative group">Competences<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
                 <li><a href="#projects" class="hover:text-white transition-all duration-300 relative group">Projets<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
                 <li><a href="#contact" class="hover:text-white transition-all duration-300 relative group">Contact<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] group-hover:w-full transition-all duration-300"></span></a></li>
             </ul>
@@ -74,9 +69,9 @@
     <div id="mobile-menu" class="fixed top-20 left-0 w-full bg-[#0d1117]/80 backdrop-blur-md z-40 hidden md:hidden">
         <ul class="py-8 space-y-4 text-center">
             <li><a href="#home" class="block py-2 hover:text-[#58a6ff] text-xl">Accueil</a></li>
-            <li><a href="#about" class="block py-2 hover:text-[#58a6ff] text-xl">À propos</a></li>
-            <li><a href="#experience" class="block py-2 hover:text-[#58a6ff] text-xl">Expérience</a></li>
-            <li><a href="#skills" class="block py-2 hover:text-[#58a6ff] text-xl">Compétences</a></li>
+            <li><a href="#about" class="block py-2 hover:text-[#58a6ff] text-xl">A propos</a></li>
+            <li><a href="#experience" class="block py-2 hover:text-[#58a6ff] text-xl">Experience</a></li>
+            <li><a href="#skills" class="block py-2 hover:text-[#58a6ff] text-xl">Competences</a></li>
             <li><a href="#projects" class="block py-2 hover:text-[#58a6ff] text-xl">Projets</a></li>
             <li><a href="#contact" class="block py-2 hover:text-[#58a6ff] text-xl">Contact</a></li>
         </ul>
@@ -107,13 +102,13 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
                 <div class="space-y-4">
-                    <span class="inline-block bg-[#21262d]/50 px-4 py-2 rounded-full text-sm font-semibold border border-[#30363d]">Développeur Full-Stack</span>
+                    <span class="inline-block bg-[#21262d]/50 px-4 py-2 rounded-full text-sm font-semibold border border-[#30363d]">Developpeur Full-Stack</span>
                     <h1 class="text-5xl md:text-7xl font-black leading-tight">
                         Shekina <span class="gradient-text">Banza</span><br>
                         <span id="typed-text" class="block text-2xl md:text-4xl font-light opacity-90"></span>
                     </h1>
                 </div>
-                <p class="text-xl text-slate-300 max-w-lg leading-relaxed">8+ ans d'expérience en développement web, IT support et gestion de bases de données. Basé à Lubumbashi, RDC.</p>
+                <p class="text-xl text-slate-300 max-w-lg leading-relaxed">8+ ans d'experience en developpement web, IT support et gestion de bases de donnees. Base a Lubumbashi, RDC.</p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#projects" class="bg-[#21262d] border border-[#30363d] px-8 py-4 rounded-2xl font-bold text-lg hover:bg-[#30363d] hover:border-[#58a6ff] transform hover:scale-105 transition-all shadow-lg hover:shadow-xl">Voir mes projets</a>
                     <a href="#contact" class="border-2 border-slate-300 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-slate-900 transition-all backdrop-blur-sm">Me contacter</a>
@@ -132,29 +127,29 @@
     <section id="about" class="py-32 px-6 bg-[#0d1117]/50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-5xl font-black mb-6 gradient-text">À propos de moi</h2>
-                <p class="text-xl text-slate-300 max-w-2xl mx-auto">Développeur Full-Stack passionné avec une expertise technique reconnue en RDC.</p>
+                <h2 class="text-5xl font-black mb-6 gradient-text">A propos de moi</h2>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">Developpeur Full-Stack passionne avec une expertise technique reconnue en RDC.</p>
             </div>
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                <div class="space-y-8">
                     <div class="bg-[#21262d]/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700">
                         <h3 class="text-3xl font-bold mb-6">Mon parcours</h3>
                         <p class="text-lg text-slate-300 leading-relaxed">
-                            Développeur Full-Stack et Technicien Informatique avec plus de 8 ans d'expérience dans la conception, le développement et la maintenance de solutions web et logicielles. 
-                            Spécialisé en développement front-end et back-end (PHP, JavaScript, HTML/CSS, WordPress), en conception d'API et en intégration d'applications de gestion.
-                            Solide maîtrise des bases de données (MySQL, SQL Server, MongoDB) ainsi que des environnements Windows et Linux.
-                            Habitué à travailler sur des projets variés allant des plateformes e-commerce aux systèmes de réservation, je mets l'accent sur la performance, la sécurité et la fiabilité des solutions livrées.
+                            Developpeur Full-Stack et Technicien Informatique avec plus de 8 ans d'experience dans la conception, le developpement et la maintenance de solutions web et logicielles. 
+                            Specialise en developpement front-end et back-end (PHP, JavaScript, HTML/CSS, WordPress), en conception d'API et en integration d'applications de gestion.
+                            Solide maitrise des bases de donnees (MySQL, SQL Server, MongoDB) ainsi que des environnements Windows et Linux.
+                            Habitude a travailler sur des projets varies allant des plateformes e-commerce aux systemes de reservation, je mets l'accent sur la performance, la securite et la fiabilite des solutions livrees.
                         </p>
                     </div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-[#21262d]/50 backdrop-blur-xl p-6 rounded-2xl border border-slate-700 text-center">
                         <div class="text-3xl font-black text-[#58a6ff] mb-2">8+</div>
-                        <div class="text-slate-300">Années d'expérience</div>
+                        <div class="text-slate-300">Annees d'experience</div>
                     </div>
                     <div class="bg-[#21262d]/50 backdrop-blur-xl p-6 rounded-2xl border border-slate-700 text-center">
                         <div class="text-3xl font-black text-[#58a6ff] mb-2">40+</div>
-                        <div class="text-slate-300">Projets réalisés</div>
+                        <div class="text-slate-300">Projets realises</div>
                     </div>
                     <div class="bg-[#21262d]/50 backdrop-blur-xl p-6 rounded-2xl border border-slate-700 text-center">
                         <div class="text-3xl font-black text-[#58a6ff] mb-2">12+</div>
@@ -162,14 +157,14 @@
                     </div>
                     <div class="bg-[#21262d]/50 backdrop-blur-xl p-6 rounded-2xl border border-slate-700 text-center">
                         <div class="text-3xl font-black text-[#58a6ff] mb-2">3</div>
-                        <div class="text-slate-300">Secteurs d'activité</div>
+                        <div class="text-slate-300">Secteurs d'activite</div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:col-span-2">
                     <div class="bg-[#21262d]/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700 space-y-4">
                         <h4 class="font-bold text-xl">Formations</h4>
                         <ul class="space-y-2 text-slate-300">
-                            <li>• Licence Conception Systèmes Informatiques - I.S.S Lubumbashi (2022-2023)</li>
+                            <li>• Licence Conception Systemes Informatiques - I.S.S Lubumbashi (2022-2023)</li>
                             <li>• Grade Informatique de gestion - I.S.S Lubumbashi (2020-2021)</li>
                             <li>• Certifications AWS, Microsoft Azure, SQL Server 2014</li>
                         </ul>
@@ -192,8 +187,8 @@
     <section id="experience" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-5xl font-black mb-6 gradient-text">Expérience Professionnelle</h2>
-                <p class="text-xl text-slate-300">Un parcours professionnel riche et évolutif de 2018 à 2026.</p>
+                <h2 class="text-5xl font-black mb-6 gradient-text">Experience Professionnelle</h2>
+                <p class="text-xl text-slate-300">Un parcours professionnel riche et evolutif de 2018 a 2026.</p>
             </div>
 
             <div class="timeline-container relative">
@@ -211,8 +206,8 @@
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Gestion opérationnelle de l'agence de transport</li>
-                            <li>• Supervision des équipes et coordination logistique</li>
+                            <li>• Gestion operationnelle de l'agence de transport</li>
+                            <li>• Supervision des equipes et coordination logistique</li>
                             <li>• Gestion des relations clients et fournisseurs</li>
                         </ul>
                     </div>
@@ -225,17 +220,17 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2020</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Développeur Freelance</h3>
+                                <h3 class="text-xl font-bold text-white">Developpeur Freelance</h3>
                                 <h4 class="text-lg font-semibold text-blue-400">Techno 3T3 (T3)</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Développement applications web et desktop</li>
-                            <li>• Système de réservation de billets d'avion en ligne</li>
-                            <li>• Application desktop de réservation de billets de train</li>
-                            <li>• Logiciel de traitement de texte et aide à la rédaction rapide</li>
+                            <li>• Developpement applications web et desktop</li>
+                            <li>• Systeme de reservation de billets d'avion en ligne</li>
+                            <li>• Application desktop de reservation de billets de train</li>
+                            <li>• Logiciel de traitement de texte et aide a la redaction rapide</li>
                             <li>• Applications Desktop (VB.NET, C#, Java)</li>
-                            <li>• Développement Android (Android Studio)</li>
+                            <li>• Developpement Android (Android Studio)</li>
                         </ul>
                     </div>
                 </div>
@@ -247,13 +242,13 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2021</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Développeur Web Freelance</h3>
+                                <h3 class="text-xl font-bold text-white">Developpeur Web Freelance</h3>
                                 <h4 class="text-lg font-semibold text-purple-400">Projet MIH Flex</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Conception et développement d'une plateforme de formation en ligne</li>
-                            <li>• Système de gestion des cours et des apprenants</li>
+                            <li>• Conception et developpement d'une plateforme de formation en ligne</li>
+                            <li>• Systeme de gestion des cours et des apprenants</li>
                             <li>• Interface intuitive et responsive design</li>
                         </ul>
                     </div>
@@ -266,17 +261,17 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-red-500 to-rose-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2021</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Régisseur & Maintenancier Informatique</h3>
+                                <h3 class="text-xl font-bold text-white">Regisseur & Maintenancier Informatique</h3>
                                 <h4 class="text-lg font-semibold text-red-400">Nyota TV</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Réparation des équipements informatiques</li>
-                            <li>• Installation du réseau local de toute l'entreprise</li>
-                            <li>• Réalisation des émissions de renom</li>
+                            <li>• Reparation des equipements informatiques</li>
+                            <li>• Installation du reseau local de toute l'entreprise</li>
+                            <li>• Realisation des emissions de renom</li>
                             <li>• Diffusion des matchs de la Ligue des Champions CAF et Linafoot RDC</li>
-                            <li>• Montage vidéo & live streaming (OBS, VMIX)</li>
-                            <li>• Support technique et multimédia</li>
+                            <li>• Montage video & live streaming (OBS, VMIX)</li>
+                            <li>• Support technique et multimedia</li>
                         </ul>
                     </div>
                 </div>
@@ -288,14 +283,14 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2022</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Archiviste & Réalisateur Live Stream</h3>
+                                <h3 class="text-xl font-bold text-white">Archiviste & Realisateur Live Stream</h3>
                                 <h4 class="text-lg font-semibold text-orange-400">TP Mazembe</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
                             <li>• Gestion et archivage des documents administratifs</li>
-                            <li>• Réalisation des live streams des matchs du club</li>
-                            <li>• Production multimédia et diffusion en direct</li>
+                            <li>• Realisation des live streams des matchs du club</li>
+                            <li>• Production multimedia et diffusion en direct</li>
                             <li>• Coordination technique des retransmissions</li>
                         </ul>
                     </div>
@@ -308,16 +303,16 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2023</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Développeur Web</h3>
+                                <h3 class="text-xl font-bold text-white">Developpeur Web</h3>
                                 <h4 class="text-lg font-semibold text-cyan-400">ODI Group</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• <strong>Ocare</strong> : Plateforme médicale en ligne</li>
+                            <li>• <strong>Ocare</strong> : Plateforme medicale en ligne</li>
                             <li>• <strong>Osat</strong> : Plateforme de distribution internet pour bornes WiFi publiques</li>
-                            <li>• <strong>Ketney Bus</strong> : Plateforme de réservation de billets en ligne</li>
-                            <li>• <strong>Ndambu Ndambu</strong> : Plateforme de réservation de billets événements/concerts</li>
-                            <li>• Développement de la partie administrative des plateformes</li>
+                            <li>• <strong>Ketney Bus</strong> : Plateforme de reservation de billets en ligne</li>
+                            <li>• <strong>Ndambu Ndambu</strong> : Plateforme de reservation de billets evenements/concerts</li>
+                            <li>• Developpement de la partie administrative des plateformes</li>
                             <li>• API, MySQL, MongoDB, Firebase</li>
                         </ul>
                     </div>
@@ -331,15 +326,15 @@
                             <div class="w-14 h-14 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2023</div>
                             <div>
                                 <h3 class="text-xl font-bold text-white">IT Gestionnaire BDD & Web</h3>
-                                <h4 class="text-lg font-semibold text-indigo-400">Ensemble Pour La République</h4>
+                                <h4 class="text-lg font-semibold text-indigo-400">Ensemble Pour La Republique</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Conception et développement du site web du parti</li>
-                            <li>• Gestion des bases de données (MySQL, MongoDB)</li>
+                            <li>• Conception et developpement du site web du parti</li>
+                            <li>• Gestion des bases de donnees (MySQL, MongoDB)</li>
                             <li>• SMS & WhatsApp Marketing (InfoBip, Twilio)</li>
-                            <li>• Marketing digital et analyse de données web</li>
-                            <li>• Support IT et maintenance des systèmes</li>
+                            <li>• Marketing digital et analyse de donnees web</li>
+                            <li>• Support IT et maintenance des systemes</li>
                         </ul>
                     </div>
                 </div>
@@ -351,14 +346,14 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2024</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Développeur & Chef de Projet</h3>
+                                <h3 class="text-xl font-bold text-white">Developpeur & Chef de Projet</h3>
                                 <h4 class="text-lg font-semibold text-emerald-400">Mon Livreur Perso (E-commerce)</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Conception et développement de la plateforme e-commerce</li>
-                            <li>• Gestion de projet et coordination des équipes</li>
-                            <li>• Intégration des systèmes de paiement</li>
+                            <li>• Conception et developpement de la plateforme e-commerce</li>
+                            <li>• Gestion de projet et coordination des equipes</li>
+                            <li>• Integration des systemes de paiement</li>
                             <li>• Optimisation des performances et UX</li>
                         </ul>
                     </div>
@@ -371,15 +366,15 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-lime-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2024</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">IT Support & Développeur Web/Desktop</h3>
+                                <h3 class="text-xl font-bold text-white">IT Support & Developpeur Web/Desktop</h3>
                                 <h4 class="text-lg font-semibold text-green-400">New Qovadis</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Développement application de gestion de caisse et stock (VB.NET)</li>
-                            <li>• Maintenance informatique et caméras de surveillance</li>
-                            <li>• Gestion de bases de données SQL Server</li>
-                            <li>• Support IT et sécurité des systèmes</li>
+                            <li>• Developpement application de gestion de caisse et stock (VB.NET)</li>
+                            <li>• Maintenance informatique et cameras de surveillance</li>
+                            <li>• Gestion de bases de donnees SQL Server</li>
+                            <li>• Support IT et securite des systemes</li>
                         </ul>
                     </div>
                 </div>
@@ -396,9 +391,9 @@
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Support informatique pour l'entreprise minière MUMI</li>
-                            <li>• Maintenance des équipements et réseaux</li>
-                            <li>• Assistance technique et résolution des incidents</li>
+                            <li>• Support informatique pour l'entreprise miniere MUMI</li>
+                            <li>• Maintenance des equipements et reseaux</li>
+                            <li>• Assistance technique et resolution des incidents</li>
                             <li>• Gestion des infrastructures IT sur site minier</li>
                         </ul>
                     </div>
@@ -417,8 +412,8 @@
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
                             <li>• Supervision et maintenance de l'infrastructure informatique</li>
-                            <li>• Gestion technique des équipements audio et réseaux</li>
-                            <li>• Support IT et optimisation des systèmes</li>
+                            <li>• Gestion technique des equipements audio et reseaux</li>
+                            <li>• Support IT et optimisation des systemes</li>
                             <li>• Contrat freelance - Direction technique de la radio</li>
                         </ul>
                     </div>
@@ -431,16 +426,16 @@
                         <div class="flex items-center mb-4">
                             <div class="w-14 h-14 bg-gradient-to-r from-violet-500 to-purple-500 rounded-xl flex items-center justify-center text-lg font-bold shadow-lg mr-4">2026</div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Développeur Freelance</h3>
-                                <h4 class="text-lg font-semibold text-violet-400">Projets Indépendants</h4>
+                                <h3 class="text-xl font-bold text-white">Developpeur Freelance</h3>
+                                <h4 class="text-lg font-semibold text-violet-400">Projets Independants</h4>
                             </div>
                         </div>
                         <ul class="text-slate-300 space-y-2 text-sm">
                             <li>• <strong>Cedrick Kabangu Law Firm</strong> : Portfolio du cabinet d'avocats</li>
-                            <li>• <strong>Kutchi Media</strong> : Site d'actualités news</li>
-                            <li>• <strong>Site Hôtel & Restaurant</strong> : Réservation de chambres et tables</li>
+                            <li>• <strong>Kutchi Media</strong> : Site d'actualites news</li>
+                            <li>• <strong>Site Hotel & Restaurant</strong> : Reservation de chambres et tables</li>
                             <li>• <strong>BGM-Shop.com</strong> : Plateforme e-commerce B2B/B2C</li>
-                            <li>• Développement full-stack et déploiement</li>
+                            <li>• Developpement full-stack et deploiement</li>
                         </ul>
                     </div>
                 </div>
@@ -453,7 +448,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black mb-6 gradient-text">Analytics des Visiteurs</h2>
-                <p class="text-xl text-slate-300">Visualisation en temps réel des visiteurs du portfolio</p>
+                <p class="text-xl text-slate-300">Visualisation en temps reel des visiteurs du portfolio</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-[#21262d]/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700 text-center">
@@ -466,12 +461,12 @@
                 </div>
                 <div class="bg-[#21262d]/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700 text-center">
                     <div class="text-5xl font-black text-orange-400 mb-2" id="unique-countries">0</div>
-                    <div class="text-slate-300 text-lg">Pays Différents</div>
+                    <div class="text-slate-300 text-lg">Pays Differents</div>
                 </div>
             </div>
             <div class="mt-12 grid md:grid-cols-2 gap-8">
                 <div class="bg-[#21262d]/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700">
-                    <h3 class="text-2xl font-bold mb-6">Répartition par Pays</h3>
+                    <h3 class="text-2xl font-bold mb-6">Repartition par Pays</h3>
                     <canvas id="countriesChart"></canvas>
                 </div>
                 <div class="bg-[#21262d]/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700">
@@ -486,8 +481,8 @@
     <section id="skills" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-5xl font-black mb-6 gradient-text">Compétences Techniques</h2>
-                <p class="text-xl text-slate-300">Stack technologique complète pour vos projets.</p>
+                <h2 class="text-5xl font-black mb-6 gradient-text">Competences Techniques</h2>
+                <p class="text-xl text-slate-300">Stack technologique complete pour vos projets.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="group">
@@ -548,7 +543,7 @@
                         </div>
                         <ul class="space-y-3 text-slate-300">
                             <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i>AWS, Microsoft Azure</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i>Réseaux & Sécurité IT</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i>Reseaux & Securite IT</li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i>Live Streaming (OBS, VMIX)</li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i>Gestion de projets</li>
                         </ul>
@@ -562,7 +557,7 @@
     <section id="projects" class="py-32 px-6 bg-[#0d1117]/50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-5xl font-black mb-6 gradient-text">Projets Réalisés</h2>
+                <h2 class="text-5xl font-black mb-6 gradient-text">Projets Realises</h2>
                 <p class="text-xl text-slate-300">Quelques projets qui illustrent mon expertise technique.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -572,8 +567,8 @@
                             <i class="fas fa-school text-5xl opacity-50"></i>
                         </div>
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-3">Plateforme SaaS Gestion École</h3>
-                            <p class="text-slate-300 mb-6">Système complet SaaS de gestion scolaire avec paiements Mobile Money (MTN/Orange), inscriptions, notes et dashboard admin.</p>
+                            <h3 class="text-2xl font-bold mb-3">Plateforme SaaS Gestion Ecole</h3>
+                            <p class="text-slate-300 mb-6">Systeme complet SaaS de gestion scolaire avec paiements Mobile Money (MTN/Orange), inscriptions, notes et dashboard admin.</p>
                             <div class="flex space-x-4 text-sm text-[#58a6ff] font-semibold">
                                 <span>PHP</span><span>MySQL</span><span>Mobile Money API</span>
                             </div>
@@ -586,8 +581,8 @@
                             <i class="fas fa-newspaper text-5xl opacity-50"></i>
                         </div>
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-3">Kutchi Media - Actualités</h3>
-                            <p class="text-slate-300 mb-6">Site d'actualités kutchimedia.info - agrégation d'actualités RDC, recherche avancée et interface responsive.</p>
+                            <h3 class="text-2xl font-bold mb-3">Kutchi Media - Actualites</h3>
+                            <p class="text-slate-300 mb-6">Site d'actualites kutchimedia.info - agregation d'actualites RDC, recherche avancee et interface responsive.</p>
                             <div class="flex space-x-4 text-sm text-green-400 font-semibold">
                                 <span>Full-Stack</span><span>PHP</span><span>Tailwind</span>
                             </div>
@@ -601,7 +596,7 @@
                         </div>
                         <div class="p-8">
                             <h3 class="text-2xl font-bold mb-3">Cedrick Kabangu Law Firm</h3>
-                            <p class="text-slate-300 mb-6">Portfolio professionnel cedrickabangu-avocat.com avec gestion de consultations, blog juridique et formulaire sécurisé.</p>
+                            <p class="text-slate-300 mb-6">Portfolio professionnel cedrickabangu-avocat.com avec gestion de consultations, blog juridique et formulaire securise.</p>
                             <div class="flex space-x-4 text-sm text-blue-400 font-semibold">
                                 <span>PHP</span><span>MySQL</span><span>Responsive</span>
                             </div>
@@ -615,7 +610,7 @@
                         </div>
                         <div class="p-8">
                             <h3 class="text-2xl font-bold mb-3">Ketney Bus / Ndambu Ndambu</h3>
-                            <p class="text-slate-300 mb-6">Plateformes de réservation de billets en ligne pour bus et événements/concerts avec paiement intégré.</p>
+                            <p class="text-slate-300 mb-6">Plateformes de reservation de billets en ligne pour bus et evenements/concerts avec paiement integre.</p>
                             <div class="flex space-x-4 text-sm text-orange-400 font-semibold">
                                 <span>PHP</span><span>API REST</span><span>MySQL</span>
                             </div>
@@ -629,7 +624,7 @@
                         </div>
                         <div class="p-8">
                             <h3 class="text-2xl font-bold mb-3">BGM-Shop.com (E-commerce B2B/B2C)</h3>
-                            <p class="text-slate-300 mb-6">Plateforme e-commerce complète avec gestion des stocks, paiements et interface admin pour vente en gros et au détail.</p>
+                            <p class="text-slate-300 mb-6">Plateforme e-commerce complete avec gestion des stocks, paiements et interface admin pour vente en gros et au detail.</p>
                             <div class="flex space-x-4 text-sm text-purple-400 font-semibold">
                                 <span>PHP</span><span>JavaScript</span><span>Tailwind</span>
                             </div>
@@ -643,7 +638,7 @@
                         </div>
                         <div class="p-8">
                             <h3 class="text-2xl font-bold mb-3">Applications Confidentielles</h3>
-                            <p class="text-slate-300 mb-6">+15 applications privées pour entreprises (gestion interne, ERP custom, systèmes propriétaires).</p>
+                            <p class="text-slate-300 mb-6">+15 applications privees pour entreprises (gestion interne, ERP custom, systemes proprietaires).</p>
                             <div class="flex space-x-4 text-sm text-gray-400 font-semibold">
                                 <span>VB.NET</span><span>PHP</span><span>Confidential</span>
                             </div>
@@ -660,7 +655,7 @@
             <div class="space-y-8">
                 <div>
                     <h2 class="text-5xl font-black mb-6 gradient-text">Travaillons ensemble</h2>
-                    <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Besoin d'un développeur Full-Stack expérimenté basé en RDC ? Contactez-moi dès maintenant.</p>
+                    <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Besoin d'un developpeur Full-Stack experimente base en RDC ? Contactez-moi des maintenant.</p>
                 </div>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -691,16 +686,16 @@
                             <input type="text" id="nom" placeholder="Votre nom complet *" required class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all">
                             <input type="email" id="email" placeholder="Votre email *" required class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all">
                         </div>
-                        <input type="tel" id="telephone" placeholder="Votre téléphone (optionnel)" class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all">
+                        <input type="tel" id="telephone" placeholder="Votre telephone (optionnel)" class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all">
                         <select id="service" class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all">
                             <option value="">Type de projet</option>
                             <option value="website">Site Web / E-commerce</option>
                             <option value="application">Application Web/Mobile</option>
                             <option value="maintenance">Maintenance IT</option>
-                            <option value="formation">Formation Développement</option>
+                            <option value="formation">Formation Developpement</option>
                             <option value="autre">Autre projet</option>
                         </select>
-                        <textarea id="message" rows="5" placeholder="Décrivez votre projet en détail *" required class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all resize-none"></textarea>
+                        <textarea id="message" rows="5" placeholder="Decrivez votre projet en detail *" required class="w-full p-5 bg-[#161b22]/50 border-2 border-slate-600 rounded-2xl text-white placeholder-slate-400 focus:border-[#58a6ff] focus:outline-none transition-all resize-none"></textarea>
                         <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-[#58a6ff] to-[#1f6feb] text-white font-bold py-5 px-8 rounded-2xl hover:from-[#4694f0] hover:to-[#1a75e0] transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl text-lg relative overflow-hidden">
                             <span class="btn-content flex items-center justify-center">
                                 <i class="fas fa-paper-plane mr-2"></i>Envoyer le message
@@ -715,14 +710,14 @@
             </div>
         </div>
         <div class="mt-24 pt-12 border-t border-slate-700">
-            <p class="text-slate-500 text-center">&copy; 2026 Shekina Banza Wandelewe. Tous droits réservés. Développeur Full-Stack basé Lubumbashi, RDC.</p>
+            <p class="text-slate-500 text-center">&copy; 2026 Shekina Banza Wandelewe. Tous droits reserves. Developpeur Full-Stack base Lubumbashi, RDC.</p>
         </div>
     </section>
 
     <script>
-        // Typed.js animation
-        new Typed('#typed-text', {
-            strings: ['Wandelewe', 'Full-Stack Developer', 'IT Expert RDC', '8+ ans d'expérience'],
+        // Typed.js animation - FIX: use double quotes to avoid apostrophe issues
+        new Typed("#typed-text", {
+            strings: ["Wandelewe", "Full-Stack Developer", "IT Expert RDC", "8+ ans d experience"],
             typeSpeed: 80,
             backSpeed: 50,
             backDelay: 1500,
@@ -800,7 +795,15 @@
                 lon: info.lon
             };
             visits.push(visitRecord);
-            localStorage.setItem('portfolio_visits', JSON.stringify(visits));
+
+            // Handle storage quota exceeded
+            try {
+                localStorage.setItem('portfolio_visits', JSON.stringify(visits));
+            } catch (e) {
+                console.warn('Storage quota exceeded, keeping last 50 visits');
+                visits = visits.slice(-50);
+                localStorage.setItem('portfolio_visits', JSON.stringify(visits));
+            }
 
             // Update stats
             updateStats(visits);
@@ -845,7 +848,7 @@
         function updateCharts(countries, daily) {
             // Countries chart
             const ctx1 = document.getElementById('countriesChart');
-            if(ctx1) {
+            if(ctx1 && Object.keys(countries).length > 0) {
                 const countryLabels = Object.keys(countries).slice(0, 8);
                 const countryData = countryLabels.map(c => countries[c]);
 
@@ -873,7 +876,7 @@
 
             // Daily chart
             const ctx2 = document.getElementById('dailyChart');
-            if(ctx2) {
+            if(ctx2 && Object.keys(daily).length > 0) {
                 const last7Days = Object.keys(daily).sort().slice(-7);
                 const dailyData = last7Days.map(d => daily[d]);
 
@@ -931,40 +934,33 @@
                 date: new Date().toLocaleString('fr-FR')
             };
 
-            const sujet = `Nouveau contact portfolio: ${formData.nom} - ${formData.service}`;
-            const corpsEmail = `NOUVEAU CONTACT PORTFOLIO SHEKINA BANZA
+            const sujet = "Nouveau contact portfolio: " + formData.nom + " - " + formData.service;
+            const corpsEmail = "NOUVEAU CONTACT PORTFOLIO SHEKINA BANZA
 
-Nom: ${formData.nom}
-Email: ${formData.email}
-Téléphone: ${formData.telephone || 'Non fourni'}
-Service: ${formData.service}
-Date: ${formData.date}
+Nom: " + formData.nom + "
+Email: " + formData.email + "
+Telephone: " + (formData.telephone || 'Non fourni') + "
+Service: " + formData.service + "
+Date: " + formData.date + "
 
 MESSAGE:
-${formData.message}
+" + formData.message + "
 
 ---
 Portfolio: https://shekinabanza.github.io/Shekina-Banza
-GitHub: https://github.com/ShekinaBanza`.trim();
+GitHub: https://github.com/ShekinaBanza";
 
-            emailjs.send("dvr74yx", "template_6w7rc4q", formData)
-                .then(function(response) {
-                    formMessage.textContent = "Message envoyé avec succès ! Je vous réponds sous 24h.";
-                    formMessage.className = "p-4 rounded-2xl font-semibold text-center bg-green-500/20 border-2 border-green-500/50 text-green-300";
-                    document.getElementById('contactForm').reset();
-                }, function(error) {
-                    const mailtoLink = `mailto:shekina646@gmail.com?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corpsEmail)}`;
-                    window.location.href = mailtoLink;
-                    formMessage.textContent = "Ouvrez votre client email pour envoyer le message !";
-                    formMessage.className = "p-4 rounded-2xl font-semibold text-center bg-blue-500/20 border-2 border-blue-500/50 text-blue-300";
-                })
-                .finally(function() {
-                    setTimeout(() => {
-                        submitBtn.disabled = false;
-                        btnContent.classList.remove('hidden');
-                        loader.classList.add('hidden');
-                    }, 2000);
-                });
+            // Use mailto fallback since EmailJS v3 requires new SDK
+            const mailtoLink = "mailto:shekina646@gmail.com?subject=" + encodeURIComponent(sujet) + "&body=" + encodeURIComponent(corpsEmail);
+            window.location.href = mailtoLink;
+            formMessage.textContent = "Ouvrez votre client email pour envoyer le message !";
+            formMessage.className = "p-4 rounded-2xl font-semibold text-center bg-blue-500/20 border-2 border-blue-500/50 text-blue-300";
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnContent.classList.remove('hidden');
+                loader.classList.add('hidden');
+            }, 2000);
         });
 
         function downloadCV() {
